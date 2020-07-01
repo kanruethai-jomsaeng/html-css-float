@@ -13,6 +13,6 @@ navClose.addEventListener('click', () => {
         "build: "next build",
         "export": "next export",
             "deploy": "npm run build && npm run export"
-            */index.html 200
+            
     }
 }
