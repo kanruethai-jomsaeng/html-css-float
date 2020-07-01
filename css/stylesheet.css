@@ -71,7 +71,19 @@ body{
     color: var(--darkBrown3);
     margin: 1rem 1.3rem;
     font-size: 4rem;
-    animation: bounce 2s ease-in-out infinite;
+    -webkit-animation: bounce 2s ease-in-out infinite;
+            animation: bounce 2s ease-in-out infinite;
+ }
+ @-webkit-keyframes bounce{
+0%{
+    transform: scale(1);
+}
+50%{
+    transform: scale(1.5);
+}
+100%{
+    transform: scale(1);
+}
  }
  @keyframes bounce{
 0%{
@@ -151,7 +163,8 @@ font-size: 2.5rem;
      color: var(--lightBrown);
      font-size: 2.5rem;
      /* animation */
-     animation: slideFromRight 5s ease-in-out infinite;
+     -webkit-animation: slideFromRight 5s ease-in-out infinite;
+             animation: slideFromRight 5s ease-in-out infinite;
  }
  .banner-title {
      font-family: var(--main-ff);
@@ -160,7 +173,8 @@ font-size: 2.5rem;
      text-transform: uppercase;
      margin-top: 2.5rem;
      line-height: 1.3;
-     animation: slideFromLeft 5s ease-in-out infinite;
+     -webkit-animation: slideFromLeft 5s ease-in-out infinite;
+             animation: slideFromLeft 5s ease-in-out infinite;
  }
  .main-btn,.banner-btn{
      display: inline-block;
@@ -187,11 +201,22 @@ font-size: 2.5rem;
  .banner-btn{
      padding: 1.2rem 1.5rem;
      /* animation */
-     animation: show 5s ease-in-out 2;
+     -webkit-animation: show 5s ease-in-out 2;
+             animation: show 5s ease-in-out 2;
  }
 
  /* ***************************end of header*****************/
  /* animation */
+ @-webkit-keyframes show {
+     0%{
+         transform: scale(2);
+         opacity: 0;
+     }
+     100%{
+         transform: scale(1);
+         opacity: 1;
+     }
+ }
  @keyframes show {
      0%{
          transform: scale(2);
@@ -200,6 +225,20 @@ font-size: 2.5rem;
      100%{
          transform: scale(1);
          opacity: 1;
+     }
+ }
+@-webkit-keyframes slideFromRight {
+     0%{
+         transform: translateX(1000px);
+      }
+    50%{
+         transform: translateX(-200px);
+      }
+    75%{
+         transform: translateX(50px);
+      }
+     100%{
+       transform: translateX(0px);  
      }
  }
 @keyframes slideFromRight {
@@ -211,6 +250,20 @@ font-size: 2.5rem;
       }
     75%{
          transform: translateX(50px);
+      }
+     100%{
+       transform: translateX(0px);  
+     }
+ }
+ @-webkit-keyframes slideFromLeft {
+     0%{
+         transform: translateX(-1000px);
+      }
+    50%{
+         transform: translateX(200px);
+      }
+    75%{
+         transform: translateX(-50px);
       }
      100%{
        transform: translateX(0px);  
@@ -243,7 +296,7 @@ font-size: 2.5rem;
     padding: 2rem 0;
 }
 .about-picture-container{
-   
+    box-shadow: 5px 5px 4px 0px rgba(0,0,0,0.75);
     border: 0.5rem solid var(--darkBrown3);
     border-radius: 1rem;
     overflow: hidden;
@@ -339,7 +392,8 @@ transform: scale(1.3);
 .product-img{
     width: 100%;
     height: 20rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     display: block;
     border-radius: 1rem;
     margin-bottom: 2rem;
@@ -421,7 +475,6 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     margin: 2rem 0;
     box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
     transition: var(--mainTransition);
-    /* box-shadow */
 }
 .service-card:hover{
     transform: scale(1.1);
@@ -429,7 +482,8 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 .service-img{
     width: 100%;
     height: 18rem;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     display: block;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -512,6 +566,26 @@ box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     background: transparent;
     font-size: 1.3rem;
     font-family: var(--secon-ff);
+}
+.form-control::-webkit-input-placeholder{
+    color: var(--darkBrown3);
+    text-transform: uppercase;
+    letter-spacing: var(--leterSpacing);
+}
+.form-control::-moz-placeholder{
+    color: var(--darkBrown3);
+    text-transform: uppercase;
+    letter-spacing: var(--leterSpacing);
+}
+.form-control:-ms-input-placeholder{
+    color: var(--darkBrown3);
+    text-transform: uppercase;
+    letter-spacing: var(--leterSpacing);
+}
+.form-control::-ms-input-placeholder{
+    color: var(--darkBrown3);
+    text-transform: uppercase;
+    letter-spacing: var(--leterSpacing);
 }
 .form-control::placeholder{
     color: var(--darkBrown3);
