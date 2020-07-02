@@ -8,11 +8,3 @@ navBtn.addEventListener('click',() => {
 navClose.addEventListener('click', () => {
     navbar.classList.remove('showNav');
 });
-{
-    "scripts": {
-        "build: "next build",
-        "export": "next export",
-            "deploy": "npm run build && npm run export"
-            
-    }
-}
